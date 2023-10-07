@@ -52,4 +52,4 @@ function game() {
         }
     }
 
-game()
+    console.log("Please enter 'game()' to Start")
