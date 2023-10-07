@@ -26,7 +26,7 @@ function playRound () {
 }
 
 function game() {
-        console.log("This is Human vs AI rock paper and scissors game, please input your selection and you will see the result in the console.log of your browser.")
+        console.log("This is Human vs AI rock paper and scissors game, please input your selection and you will see the result in the console of your browser.")
         let humanCounter = 0;
         let machineCounter = 0;
         let i = 0;
