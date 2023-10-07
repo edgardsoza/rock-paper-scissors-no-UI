@@ -46,9 +46,9 @@ function game() {
             }
         }
         if(machineCounter > humanCounter) {
-            return(`Machines have won!!! Your world is ours!! Final score is Machines=${machineCounter} and Humans=${humanCounter}`)
+            return(`Machines have won!!! Your world is ours!! Final score is Machines=${machineCounter} and Humans=${humanCounter}. Reload to play again`)
         } else {
-            return(`Humans have won!!! We will send you our best antivirus!!  Final score is Humans=${humanCounter} and Machines=${machineCounter}`)
+            return(`Humans have won!!! We will send you our best antivirus!!  Final score is Humans=${humanCounter} and Machines=${machineCounter}. Reload to play again`)
         }
     }
 
