@@ -5,13 +5,7 @@ function computerPlay () {
 }
 
 function playRound () {
-    let playerSelection = (prompt('Enter your input, you miserable Human'));
-
-    if (playerSelection === null || playerSelection.trim() === '') {
-        console.log("Please enter a valid option");
-      }
-
-    playerSelection = (prompt('Enter your input, you miserable Human')).toLowerCase().trim();
+    let playerSelection = (prompt('Enter your input, you miserable Human')).toLowerCase().trim();
     let computerSelection = computerPlay();
 
     if (playerSelection == computerSelection) {
@@ -41,13 +35,13 @@ function game() {
             if (round == 1) {
                 humanCounter += 1;
                 i++;
-                console.log(`Humans won round ${round}!! Humans=${humanCounter} and Machines=${machineCounter}`)
+                console.log(`Humans won round ${i}!! Humans=${humanCounter} and Machines=${machineCounter}`)
             } else if (round == 2) {
                 machineCounter +=  1;
                 i++;
-                console.log(`The AI has won this round ${round} hahahaha!! Machines=${machineCounter} and Humans=${humanCounter}`)
+                console.log(`The AI has won this round ${i} hahahaha!! Machines=${machineCounter} and Humans=${humanCounter}`)
             } else {
-                console.log(`This round ${round} goes for nobody!! Try again you human!! Machines=${machineCounter} and Humans=${humanCounter}`)
+                console.log(`This round goes for nobody!! Try again you human!! Machines=${machineCounter} and Humans=${humanCounter}`)
                 continue;
             }
         }
