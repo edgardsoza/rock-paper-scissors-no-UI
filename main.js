@@ -4,8 +4,22 @@ function computerPlay () {
     return options[Math.floor(Math.random()*options.length)]
 }
 
+function playerSelectionValidation () {
+    let playerSelection = (prompt('Enter your input, you miserable Human'));
+    if (playerSelection === null || playerSelection === ""){
+        alert("Please enter a valid option")
+        console.log("Please enter a valid option")
+    } else if(!options.includes(playerSelection.toLowerCase().trim())) {
+        alert("Please enter a valid option")
+        console.log("Please enter a valid option")
+    } else {
+        playerSelection = playerSelection.toLowerCase().trim();
+        return playerSelection
+    }
+}
+
 function playRound () {
-    let playerSelection = (prompt('Enter your input, you miserable Human')).toLowerCase().trim();
+    let playerSelection = playerSelectionValidation();
     let computerSelection = computerPlay();
 
     if (playerSelection == computerSelection) {
@@ -48,8 +62,9 @@ function game() {
         if(machineCounter > humanCounter) {
             return(`Machines have won!!! Your world is ours!! Final score is Machines=${machineCounter} and Humans=${humanCounter}. Reload to play again`)
         } else {
-            return(`Humans have won!!! We will send you our best antivirus!!  Final score is Humans=${humanCounter} and Machines=${machineCounter}. Reload to play again`)
+            return(`Humans have won!!! We will send you our best antivirus! Final score is Humans=${humanCounter} and Machines=${machineCounter}. Reload to play again`)
         }
     }
 
+    alert("This is Human vs AI rock paper and scissors game, please go to developer tools in your browser and input game() to start")
     console.log("Please enter 'game()' to Start")
